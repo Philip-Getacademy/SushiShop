@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CollectionClass\**" />
+    <Compile Remove="PrimitiveClasses\**" />
+    <EmbeddedResource Remove="CollectionClass\**" />
+    <EmbeddedResource Remove="PrimitiveClasses\**" />
+    <None Remove="CollectionClass\**" />
+    <None Remove="PrimitiveClasses\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Misc\PrimitiveClasses\Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Economy\CollectionClass\" />
+  </ItemGroup>
+
+</Project>

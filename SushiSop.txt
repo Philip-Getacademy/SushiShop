@@ -1,0 +1,89 @@
+@startuml
+
+title Simple Object Diagram
+
+object RegistryKiosk
+object CustomerRegistry
+object Customer
+object Receipt
+object Amount
+object ID
+object DateTime
+object Menu
+object Recipes
+object Recipe
+object Ingredients
+object Ingredient
+object Categories
+object Category
+object Name
+
+RegistryKiosk --|> CustomerRegistry
+RegistryKiosk --|> Menu
+
+CustomerRegistry --|> Customer
+Menu --|> Recipes
+Menu --|> Categories
+
+
+Customer --|> Receipts
+Customer --|> Amount
+Customer --|> ID
+Recipes --|> Recipe
+Categories --|> Category
+
+Receipts --|> Receipt
+Receipt --|> Amount
+Receipt --|> DateTime
+Receipt --|> ID
+Recipe --|> Ingredients
+Recipe --|> Name
+Recipe --|> Amount
+
+Ingredients --|> Ingredient
+Ingredient --|> Category
+Ingredient --|> ID
+Ingredient --|> Name
+Ingredient --|> Amount
+
+Categories --|> ID
+
+Category --|> Name
+
+RegistryKiosk : CustomerRegistry Customers
+RegistryKiosk : Menu Menu
+
+CustomerRegistry : List <Customer> Customers
+Menu : Recipes Recipes
+Menu : Categories Categories
+
+Recipes :  List <Recipe> Recipes
+Categories : Dictionary <Category, Id> Categories
+Customer : ID Id - incremental
+Customer : Amount Money - random
+Customer : Receipts Receipts
+
+Recipe : Ingredients Ingredients
+Recipe : Amount Price
+Recipe : Name Name
+
+Receipts : List <Receipt> Receipts
+Ingredients : List<Ingredient> Ingredients
+
+Receipt : ID Id - new incremental
+Receipt : DateTime DateTime
+Receipt : Amount TotalOrderAmount
+Ingredient : Name Name
+Ingredient : ID Id
+Ingredient : Amount Amount
+Ingredient : Categroy Category
+Ingredient : Amount Price
+
+Category : Name
+
+Amount : int amountOf
+DateTime : DateTime.Now
+ID : int identityNumber
+Name : string name
+
+@enduml
