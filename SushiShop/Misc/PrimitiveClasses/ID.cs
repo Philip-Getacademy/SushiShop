@@ -20,9 +20,7 @@ namespace SushiShop.Misc
             return GetID();
         }
 
-        public int GetID()
-        {
-            return Id;
-        }
+        public int GetID() => Id;
+
     }
 }

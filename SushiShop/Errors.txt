@@ -1,0 +1,26 @@
+TOI: 17/02/2021 15:59:13 Error occured during construction of DB tables 
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'hei0' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SushiShop.Misc.DescribingClass.DBTableConstructorFile..ctor() in C:\Users\XXXXX\Documents\Developing\Getacademy C#\SushiShop\SushiShop\SushiShop\Misc\DescribingClass\DBTableConstructorFile.cs:line 40
+ClientConnectionId:d10571d2-3db9-4264-98ca-5b731ea66c3c
+Error Number:2714,State:6,Class:16 
+
+TOI: 17/02/2021 16:01:31 Error occured during construction of DB tables 
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'hei0' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SushiShop.Misc.DescribingClass.DBTableConstructorFile..ctor() in C:\Users\XXXXX\Documents\Developing\Getacademy C#\SushiShop\SushiShop\SushiShop\Misc\DescribingClass\DBTableConstructorFile.cs:line 40
+ClientConnectionId:25c6de0b-eb1d-43f6-85aa-947e55eece56
+Error Number:2714,State:6,Class:16 
+

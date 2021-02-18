@@ -4,27 +4,35 @@ namespace SushiShop.Food
 {
     class Ingredient
     {
-        public Name IngredientName { get; }
-        public Price IngredientPrice { get; }
-        public Amount IngredientAmount { get; }
 
-        public static ID GlobalId = new ID();
+        private Name IngredientName { get; }
+        private Price IngredientPrice { get; }
+        private Amount IngredientAmount { get; }
+
         public ID Id { get; }
-        public Category Category { get; }
+        private static ID GlobalId = new ID();
+        
+        private Category IngredientCategory { get;  }
 
-        public Ingredient(string name, int price, int amount, string category)
+        public Ingredient(string name, double price, int amount, string category)
         {
             IngredientName = new Name(name);
             IngredientPrice = new Price(price);
             IngredientAmount = new Amount(amount);
-            Category = new Category(category);
+            IngredientCategory = new Category(category);
 
             Id = new ID(GlobalId.GetID());
             GlobalId = new ID(GlobalId.NextID());
         }
 
-        public string Name => IngredientName.ThisName;
+        public string Name => IngredientName.SName;
         public double Price => IngredientPrice.Value;
         public int Amount => IngredientAmount.Count;
+        public Category Category => IngredientCategory;
+        public string SCategory => IngredientCategory.SName;
+
+        public void Decrement(int x) => IngredientAmount.Decrease(x);
+        public void Increment(int x) => IngredientAmount.Increase(x);
+
     }
 }

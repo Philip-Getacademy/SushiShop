@@ -7,8 +7,8 @@ namespace SushiShop.Food
 {
     class Categories
     {
-        public List<Category> Cs { get; set; }
-        public Ingredients I { get; set; }
+        public List<Category> Cs { get; }
+        public Ingredients I { get; }
 
         public Categories()
         {

@@ -2,6 +2,7 @@
 
 using SushiShop.Misc;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SushiShop.Food
 {
@@ -18,7 +19,7 @@ namespace SushiShop.Food
             Items = BuildRecipe(items);
         }
 
-        public string Name => RecipeName.ThisName;
+        public string Name => RecipeName.SName;
 
         private Dictionary<Ingredient, Amount> BuildRecipe(params Ingredient[] items)
         {
@@ -30,6 +31,23 @@ namespace SushiShop.Food
             }
 
             return Ingredients;
+        }
+
+
+        public static List<Ingredient> Combine(params Recipe[] recipes)
+        {
+            var stats = new List<Ingredient>();
+
+            foreach (var recipe in recipes)
+                foreach (var (i, a) in recipe.Items)
+                {
+                    if (!stats.Contains(i)) 
+                        stats.Add(new Ingredient(i.Name, i.Price, 0, i.SCategory));
+
+                    stats.Find(f => f.Name.ToLower() == i.Name.ToLower())?.Increment(a.Count);
+                }
+
+            return stats;
         }
 
         private Dictionary<Ingredient, Amount> ItemsBuilder => new Dictionary<Ingredient, Amount>();

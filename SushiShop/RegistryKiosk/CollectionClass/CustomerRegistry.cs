@@ -1,11 +1,7 @@
-﻿using SushiShop.Misc;
+﻿using System.Collections.Generic;
+using SushiShop.Misc;
 
-
-using System.Collections.Generic;
-
-
-
-namespace SushiShop.Food
+namespace SushiShop.RegistryKiosk.CollectionClass
 {
     class CustomerRegistry
     {

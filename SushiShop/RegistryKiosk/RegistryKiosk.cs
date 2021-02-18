@@ -31,23 +31,23 @@ namespace SushiShop.RegistryKiosk
         {
             foreach (var c in C.Cs)
             {
-                Console.WriteLine(c.Name);
+                Console.WriteLine(c.SName);
             }
         }
 
-        public void OrderItem(string item, int amount)
-        {
-            var receipt = new Receipt(FetchSelectedIngredientsList(item), amount); 
-            OrderHistory.Add(receipt);
-            Console.WriteLine(receipt.GenerateReceipt());
+        //public void OrderItem(string item, int amount)
+        //{
+        //    var receipt = new Receipt(FetchSelectedIngredientsList(item), amount); 
+        //    OrderHistory.Add(receipt);
+        //    Console.WriteLine(receipt.GenerateReceipt());
 
-        }
+        //}
 
-        public string FetchRecipeName(string item) =>
-            Recipes.GetRecipeList.Find(x => x.Name == item)?.Name;
+        //public string FetchRecipeName(string item) =>
+        //    Recipes.GetRecipeList.Find(x => x.Name == item)?.Name;
 
-        public List<KeyValuePair<Ingredient, Amount>> FetchSelectedIngredientsList(string item) =>
-            Recipes.GetRecipeList.Find(x => x.Name == item)?.Items.ToList();
-        
+        //public List<KeyValuePair<Ingredient, Amount>> FetchSelectedIngredientsList(string item) =>
+        //    Recipes.GetRecipeList.Find(x => x.Name == item)?.Items.ToList();
+
     }
 }

@@ -1,7 +1,8 @@
 ﻿
 using SushiShop.Food;
-using SushiShop.Misc;
+using SushiShop.ShopKiosk;
 using SushiShop.RegistryKiosk;
+using SushiShop.RegistryKiosk.CollectionClass;
 
 namespace SushiShop
 {
@@ -10,13 +11,12 @@ namespace SushiShop
         static void Main(string[] args)
         {
 
-            var Stock = new Ingredients(); 
-            Stock.ListCurrentStock();
+            var SushiShopKiosk = new AutomatedKiosk("SushiShop");
+            SushiShopKiosk.Run();
 
-            var Kiosk = new Kiosk();
-            Kiosk.Run();
-            Kiosk.OrderItem("Salmon Nigiri", 1);
-            Kiosk.OrderItem("Scallop Nigiri", 1);
+            var selectedItems = new [] {"Scallop Nigiri", "Salmon Nigiri", "Salmon Nigiri"};
+            SushiShopKiosk.Order(selectedItems);
+                
 
         }
     }

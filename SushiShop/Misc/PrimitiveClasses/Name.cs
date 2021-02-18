@@ -6,11 +6,11 @@ namespace SushiShop.Misc
 {
     class Name
     {
-        public string ThisName { get; set; }
+        public string SName { get; set; }
 
         public Name(string name)
         {
-            ThisName = name;
+            SName = name;
         }
     }
 }

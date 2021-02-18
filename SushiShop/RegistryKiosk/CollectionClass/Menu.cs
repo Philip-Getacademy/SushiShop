@@ -1,10 +1,6 @@
 ﻿using SushiShop.Food;
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SushiShop.RegistryKiosk
+namespace SushiShop.RegistryKiosk.CollectionClass
 {
     class Menu
     {

@@ -39,6 +39,7 @@ namespace SushiShop.Food
             }
         }
 
+
         private Ingredient GetIngredient(string s) => I.Find(x => x.Name == s);
 
         // XML??
@@ -52,6 +53,5 @@ namespace SushiShop.Food
             DBIs.Add(new Ingredient("Vanilla", 15, 10, "Ice Cream"));
             DBIs.Add(new Ingredient("Choclate", 15, 10, "Ice Cream"));
         }
-
     }
 }

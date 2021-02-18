@@ -11,7 +11,7 @@ namespace SushiShop.Economy
 {
     class Receipt
     {
-        private static ID GlobalId = new ID(1);
+        private static ID GlobalId = new ID(10);
         private ID Id { get; }
         private DateTime TimeOfPurchase { get; }
 

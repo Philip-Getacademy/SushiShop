@@ -11,6 +11,6 @@ namespace SushiShop.Food
             this.name = new Name(name);
         }
 
-        public string Name => name.ThisName;
+        public string SName => name.SName;
     }
 }

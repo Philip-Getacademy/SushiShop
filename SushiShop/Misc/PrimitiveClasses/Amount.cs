@@ -6,7 +6,7 @@ namespace SushiShop.Misc
 {
     class Amount
     {
-        private int Value { get; }
+        private int Value { get; set; }
 
         public Amount(int amount)
         {
@@ -15,6 +15,10 @@ namespace SushiShop.Misc
 
 
         public int Count => Value;
+
+
+        public void Decrease(int x) => Value = (Value - x >= 0) ? Value -= x : Value;
+        public void Increase(int x) => Value += x;
 
     }
 }
